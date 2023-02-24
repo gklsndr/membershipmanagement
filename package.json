@@ -1,0 +1,27 @@
+{
+  "name": "kau-mem-fs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@firebase/app": "^0.9.3",
+    "@firebase/firestore": "^3.8.3",
+    "axios": "^1.2.0",
+    "dashify": "^2.0.0",
+    "firebase": "^9.17.1",
+    "firebase-admin": "^11.3.0",
+    "firebase-tools": "^11.24.0",
+    "next": "13.0.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/bhuvanesh/kau-mem-fs.git",
+  "author": "Gokul Sundar <gokul@walnuts.co.in>",
+  "license": "MIT"
+}
