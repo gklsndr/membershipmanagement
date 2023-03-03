@@ -17,14 +17,37 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
   }
 }
 
+.image-container {
+
+  width: 100%;
+  padding-bottom: 1.5rem;
+    border-bottom: 1px solid;
+  > div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  align-items: center;
+}
 /*-------- OnBoarding Page --------*/
 .onboarding {
   /* border: solid 1px rgb(213, 213, 213); */
@@ -44,7 +67,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 50%;
+  width: 100%;
   text-align: start;
 }
 
