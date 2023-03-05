@@ -1,21 +1,27 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import dashify from "dashify";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import SignaturePad from 'react-signature-canvas';
 
 const Register = () => {
+  // const signPadRef = useRef();
+  let signPad = {};
   const [content, setContent] = useState({
     name: "",
-    dob_day: "",
-    dob_month: "",
-    dob_year: "",
-    mobile: "",
-    email: "",
+    // dob_day: "",
+    // dob_month: "",
+    // dob_year: "",
+    // mobile: "",
+    // email: "",
   });
 
   const router = useRouter();
 
+  const clearSignature = () => {
+    signPad.clear();
+  };
   const onChange = (e) => {
     const { value, name } = e.target;
     setContent((prevState) => ({ ...prevState, [name]: value }));
@@ -216,7 +222,16 @@ const Register = () => {
           
           <label htmlFor="consent"> I will obey the rules and regulations of the union</label>
           </div>
-          <button onClick={onSubmit}>Submit</button>
+
+          <div className="signature">
+            <div className="signature__header">
+            <label htmlFor="signature"> Sign  </label>
+            <input type="button" className="clear" onClick={clearSignature} value="Clear" />
+            </div>
+            <SignaturePad canvasProps={{className: "signatureCanvas"}}
+          ref={(ref) => {signPad = ref}} />
+          </div>
+          <input type="button" onClick={onSubmit} value="Proceed to payment" />
         </section>
       </form>
     </div>
