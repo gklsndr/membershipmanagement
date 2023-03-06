@@ -100,7 +100,7 @@ const Register = () => {
             name="mobileNo"
             placeholder="Mobile Number"
             required={true}
-            value={content.fatherName}
+            value={content.mobileNo}
             onChange={onChange}
           />
           <label htmlFor="address"> Address</label>
